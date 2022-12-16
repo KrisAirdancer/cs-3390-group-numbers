@@ -12,11 +12,13 @@
     <main id="main">
         <!-- TODO: Inject image tags here -->
 
-        <div class="image" id="_1" style='background-image: url(public/scans/1.jpg)''>
+        <div class="image nsfw" style='background-image: url(public/scans/1.jpg)''>
             <div class="nsfw-overlay"><p>NSFW</p><p>(click to reveal)</p></div>
         </div>
+        <div class="image" style='background-image: url(public/scans/2.jpg)''>
+        </div>
 
-        <img src="public/scans/2.jpg" class="image nsfw-overlay" alt="A group number">
+        <!-- <img src="public/scans/2.jpg" class="image nsfw-overlay" alt="A group number"> -->
         <!-- <img src="public/scans/3.jpg" alt="A group number">
         <img src="public/scans/4.jpg" alt="A group number">
         <img src="public/scans/5.jpg" alt="A group number">
@@ -83,6 +85,8 @@
         box-shadow: 3px 3px 15px #081421;
         border-radius: 5px;
         margin: 5px;
+        background-position: center;
+        background-size: cover;
     }
 
     .nsfw-overlay {
@@ -97,8 +101,43 @@
         content: 'NSFW';
     }
 
+    .nsfw-overlay:hover {
+        cursor: pointer;
+    }
+
+    .image-hover:hover {
+        cursor: pointer;
+    }
+
     p {
         margin: 0px;
         padding: 0px;
     }
 </style>
+<script>
+
+    let images = document.querySelectorAll('.image');
+
+    images.forEach(image => {
+
+        image.addEventListener('click', e => {
+
+            if (image.classList.contains('nsfw'))
+            {
+                let child = image.childNodes[1];
+
+                if (child.classList.contains('nsfw-overlay')) // Remove overlay
+                {
+                    child.classList.remove('nsfw-overlay');
+                    child.innerHTML = '';
+                    image.classList.add('image-hover');
+                }
+                else // Add overlay
+                {
+                    child.classList.add('nsfw-overlay');
+                    child.innerHTML = '<p>NSFW</p><p>(click to reveal)</p>';
+                }
+            }
+        });
+    });
+</script>
