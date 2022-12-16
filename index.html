@@ -10,8 +10,6 @@
 <body>
     <h1>CS 3390 Group Numbers</h1>
     <main id="main">
-        <!-- TODO: Inject image tags here -->
-
         <div class="image" style='background-image: url(public/scans/1.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/2.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/3.jpg)'></div>
@@ -47,11 +45,6 @@
         <div class="image" style='background-image: url(public/scans/31.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/32.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/33.jpg)'></div>
-
-
-
-
-
     </main>
 </body>
 </html>
@@ -68,14 +61,15 @@
         justify-content: center;
     }
 
-    img {
-        width: 400px;
-        height: 400px;
-        box-shadow: 3px 3px 15px #081421;
-        border-radius: 5px;
-        margin: 5px;
+    h1 {
+        text-align: center;
     }
-    
+
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+
     .image {
         width: 400px;
         height: 400px;
@@ -94,8 +88,9 @@
         width: 400px;
         height: 400px;
         border-radius: 5px;
-        background-color: rgb(98, 98, 98);
+        background-color: rgb(228, 228, 228);
         content: 'NSFW';
+        color: black;
     }
 
     .nsfw-overlay:hover {
@@ -105,14 +100,8 @@
     .image-hover:hover {
         cursor: pointer;
     }
-
-    p {
-        margin: 0px;
-        padding: 0px;
-    }
 </style>
 <script>
-
     let images = document.querySelectorAll('.image');
 
     images.forEach(image => {
@@ -121,11 +110,10 @@
 
             if (image.classList.contains('nsfw'))
             {
-                console.log('NSFW');
-
                 let child = image.childNodes[1];
 
-                if (child.classList.contains('nsfw-overlay')) // Remove overlay
+                // Remove overlay
+                if (child.classList.contains('nsfw-overlay'))
                 {
                     child.classList.remove('nsfw-overlay');
                     child.innerHTML = '';
