@@ -12,49 +12,46 @@
     <main id="main">
         <!-- TODO: Inject image tags here -->
 
-        <div class="image nsfw" style='background-image: url(public/scans/1.jpg)''>
+        <div class="image" style='background-image: url(public/scans/1.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/2.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/3.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/4.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/5.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/6.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/7.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/8.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/9.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/10.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/11.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/12.jpg)'></div>
+        <div class="image nsfw" style='background-image: url(public/scans/13.jpg)'>
             <div class="nsfw-overlay"><p>NSFW</p><p>(click to reveal)</p></div>
         </div>
-        <div class="image" style='background-image: url(public/scans/2.jpg)''>
-        </div>
+        <div class="image" style='background-image: url(public/scans/14.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/15.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/16.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/17.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/18.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/19.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/20.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/21.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/22.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/23.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/24.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/25.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/26.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/27.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/28.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/29.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/30.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/31.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/32.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/33.jpg)'></div>
 
-        <!-- <img src="public/scans/2.jpg" class="image nsfw-overlay" alt="A group number"> -->
-        <!-- <img src="public/scans/3.jpg" alt="A group number">
-        <img src="public/scans/4.jpg" alt="A group number">
-        <img src="public/scans/5.jpg" alt="A group number">
-        <img src="public/scans/6.jpg" alt="A group number">
-        <img src="public/scans/7.jpg" alt="A group number">
-        <img src="public/scans/8.jpg" alt="A group number">
-        <img src="public/scans/9.jpg" alt="A group number">
-        <img src="public/scans/10.jpg" alt="A group number">
-        <img src="public/scans/11.jpg" alt="A group number">
-        <img src="public/scans/12.jpg" alt="A group number"> -->
 
-        <!-- <div class="image" id="_13">
-            <div class="nsfw-overlay"></div>
-            <img src="public/scans/13.jpg" alt="A group number" class="nsfw">
-        <!-- </div> -->
 
-        <!-- <img src="public/scans/14.jpg" alt="A group number">
-        <img src="public/scans/15.jpg" alt="A group number">
-        <img src="public/scans/16.jpg" alt="A group number">
-        <img src="public/scans/17.jpg" alt="A group number">
-        <img src="public/scans/18.jpg" alt="A group number">
-        <img src="public/scans/19.jpg" alt="A group number">
-        <img src="public/scans/20.jpg" alt="A group number">
-        <img src="public/scans/21.jpg" alt="A group number">
-        <img src="public/scans/22.jpg" alt="A group number">
-        <img src="public/scans/23.jpg" alt="A group number">
-        <img src="public/scans/24.jpg" alt="A group number">
-        <img src="public/scans/25.jpg" alt="A group number">
-        <img src="public/scans/26.jpg" alt="A group number">
-        <img src="public/scans/27.jpg" alt="A group number">
-        <img src="public/scans/28.jpg" alt="A group number">
-        <img src="public/scans/29.jpg" alt="A group number">
-        <img src="public/scans/30.jpg" alt="A group number">
-        <img src="public/scans/31.jpg" alt="A group number">
-        <img src="public/scans/32.jpg" alt="A group number">
-        <img src="public/scans/33.jpg" alt="A group number"> -->
+
+
     </main>
 </body>
 </html>
@@ -124,6 +121,8 @@
 
             if (image.classList.contains('nsfw'))
             {
+                console.log('NSFW');
+
                 let child = image.childNodes[1];
 
                 if (child.classList.contains('nsfw-overlay')) // Remove overlay
