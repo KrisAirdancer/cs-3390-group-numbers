@@ -62,6 +62,7 @@
     }
 
     h1 {
+        font-size: 2rem;
         text-align: center;
     }
 
@@ -100,6 +101,64 @@
     .image-hover:hover {
         cursor: pointer;
     }
+
+    /***** MEDIA QUERRIES *****/
+
+    @media screen and (width < 475px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .image {
+            width: 300px;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .nsfw-overlay {
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media screen and (width < 350px) {
+        .image {
+            width: 200px;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .nsfw-overlay {
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media screen and (width < 250px) {
+        p {
+            font-size: 0.75rem;
+        }
+        
+        .image {
+            width: 100px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .nsfw-overlay {
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+        }
+    }
 </style>
 <script>
     let images = document.querySelectorAll('.image');
@@ -128,11 +187,3 @@
         });
     });
 </script>
-
-// TODO: Make images responsive (shrink when screen gets too small)
-// TODO: Crop the rest of the images
-// TODO: Add the rest of the images
-// TODO: Deply to GitHub pages
-// TODO: Deploy to krisairdancer.com
-// TODO: Update project README
-// TODO: Update GitHub README
