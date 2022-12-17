@@ -9,7 +9,10 @@ If you want to download all of the scans, just download the repo. The images are
 
 // TODO: Crop the rest of the images
 // TODO: Add the rest of the images
+// TODO: Work out personal color scheme
+// TODO: Apply personal color scheme to site
 // TODO: Deply to GitHub pages
 // TODO: Deploy to krisairdancer.com
 // TODO: Update project README
 // TODO: Update GitHub README
+// TODO: Rescan the "5" card that has cutoff text
