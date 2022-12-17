@@ -44,8 +44,12 @@
         <div class="image" style='background-image: url(public/scans/31.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/32.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/33.jpg)'></div>
-        <div class="image" style='background-image: url(public/scans/33b.jpg)'></div>
-        <div class="image" style='background-image: url(public/scans/34.jpg)'></div>
+        <div class="image" style='background-image: url(public/scans/33b.jpg)'>
+            <div class="front-back-overlay"><p>front</p></div>
+        </div>
+        <div class="image" style='background-image: url(public/scans/34.jpg)'>
+            <div class="front-back-overlay"><p>back</p></div>
+        </div>
         <div class="image" style='background-image: url(public/scans/35.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/36.jpg)'></div>
         <div class="image" style='background-image: url(public/scans/37.jpg)'></div>
@@ -158,6 +162,7 @@
     }
 
     .image {
+        display: flex;
         width: 400px;
         height: 400px;
         box-shadow: 3px 3px 15px #081421;
@@ -182,6 +187,15 @@
 
     .nsfw-overlay:hover {
         cursor: pointer;
+    }
+
+    .front-back-overlay {
+        height: 20px;
+        width: 35px;
+        color: black;
+        background-color: rgba(0, 0, 0, 0.493);
+        border-radius: 3px;
+        text-align: center;
     }
 
     .image-hover:hover {
@@ -243,6 +257,14 @@
             justify-content: center;
             width: 100px;
             height: 100px;
+        }
+
+        .front-back-overlay {
+            height: 15px;
+            width: 25px;
+            color: black;
+            background-color: rgba(0, 0, 0, 0.493);
+            border-radius: 3px;
         }
     }
 </style>
